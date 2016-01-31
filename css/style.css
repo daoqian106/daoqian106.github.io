@@ -1,0 +1,131 @@
+@font-face
+{
+	font-family: 'Lubalin';
+	src: url('/fonts/Lubalin/LubalinGraphStd-Book.otf') format('opentype');
+}
+
+body
+{
+	font-family: Arial, Helvetica, sans-serif, STSong;
+	overflow: auto;
+	padding: 0 5px;
+	background-color: #F2F2F2;
+	margin: 0 0;
+}
+
+/* reveal-modal */
+.reveal-modal-bg
+{
+	position:fixed;
+	height:100%;
+	width:100%;
+	background-color:#000;
+	z-index:100;
+	display:none;
+	top:0;
+	left:0;
+}
+.reveal-modal
+{
+	visibility:hidden;
+	top:200px;
+	left:50%;
+	margin-left:-250px;
+	width:500px;
+	background: #FFFFFF;
+	position:absolute;
+	z-index:101;
+	padding:30px 40px 34px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	-moz-box-shadow:0 0 10px rgba(0,0,0,.4);
+	-webkit-box-shadow:0 0 10px rgba(0,0,0,.4);
+	-box-shadow:0 0 10px rgba(0,0,0,.4);
+}
+
+.reveal-modal .close-reveal-modal 
+{
+	font-size:22px;
+	line-height:.5;
+	position:absolute;
+	top:8px;
+	right:11px;
+	color:#aaa;
+	text-shadow:0 -1px 1px rbga(0,0,0,.6);
+	font-weight:bold;
+	cursor:pointer;
+} 
+.reveal-modal h2
+{
+	font-size:18px;
+	color:#990000;
+	padding:0 auto;
+}
+.reveal-modal p{
+	padding:0 auto;
+}
+
+.reveal-modal a:hover{
+	text-decoration: none;
+}
+
+center{
+	height: 100%;
+	/* background-color: #6E6E6E; */
+}
+
+#link_find_pwd{
+	font-size: 12px;
+}
+
+#link_find_pwd:link{
+	color: #BDBDBD;
+} 
+#link_find_pwd:visited{
+	color: #BDBDBD;
+}
+#link_find_pwd:hover{
+	color: #FFFFFF;
+}
+#link_find_pwd:active{}
+
+#quit_href:link{
+	color: #000000;
+} 
+#quit_href:visited{
+	color: #000000;
+}
+#quit_href:hover{
+	color: #BDBDBD;
+	text-decoration: none;
+}
+#quit_href:active{}
+
+#main_field{
+	margin: 100px auto;
+}
+#top_div{
+	margin-right: 10px;
+	float: right;
+}
+
+/* homepage css style */
+.jumbotron{
+	height: 300px;
+	background-color: #6666CC;
+}
+
+#text-title{
+	font-weight:bold;
+	color: #CC3366;
+}
+
+#special{
+	font-weight:bold;
+}
+
+.btn{
+	color: #FF0000;
+	font-weight:bold;
+}
