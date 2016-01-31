@@ -1,3 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>hello</head>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Apology</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<a class="open_btn" id="forget_pwd_btn" data-reveal-id="forget_pwd_modal" style="display:none"></a>
+		<div id="forget_pwd_modal" class="reveal-modal">
+	  		<h2>请联系管理员修改密码！</h2>
+			<a class="close_btn close-reveal-modal">&times;</a>
+		</div>
+		<a class="open_btn" id="conn_fail_btn" data-reveal-id="conn_fail_modal" style="display:none"></a>
+		<div id="conn_fail_modal" class="reveal-modal">
+			<h2>向数据库请求数据失败，请检查数据库连接状况！</h2>
+			<a class="close_btn close-reveal-modal">&times;</a>
+		</div>	
+		<div class="jumbotron">
+			<div class="container">
+				<h1>Hey, my apology!</h1>
+			</div>
+		</div>
+		<div class="container" style="text-align:center">
+			<div>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12" id="text-title">
+							<h2>检查</h2>
+						</div>
+						<div class="col-md-offset-2 col-md-8">
+							<h3>本人在与学姐的聊天中抱残守缺，态度消极，缺乏主动，让学姐生气，对学姐造成了困扰。180度深躬道歉。学姐，我错啦，恳请原谅！</h3>
+							<h3 id="special">特此检查，恳请原谅！&_&</h3>
+							
+						</div>
+						
+						<div class="col-md-12">
+							<button type="button" class="btn btn-default">我不解气！！！</button>
+						</div>
+					</div>
+				</div>
+			<input class="pn-search-submit" type="image" src="/img/apology.png"/>
+				
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jquery.cookie.js"></script>
+		<script type="text/javascript" src="js/jquery.reveal.js"></script>
+    	<script type="text/javascript" src="js/method.js"></script>
+    	<script type="text/javascript">
+	    	$(document).ready(function(){ 
+	    		$("#warning_box").hide();  
+	   			$("#login_btn").on("click", function(event){
+	   				console.log("in click");
+	   				event.preventDefault();
+					var username = $("#username").val();
+					var password = $("#inputPassword").val();
+					if(username == "" || password==""){
+						$("#warning_box").text("用户名或密码不能为空！").show();
+						return false;
+				}
+			});
+
+	    		
+	    	});
+    	</script> 
+	</body>
 </html>
