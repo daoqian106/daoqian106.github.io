@@ -10,17 +10,19 @@
 	<body>
 		<a class="open_btn" id="forget_pwd_btn" data-reveal-id="forget_pwd_modal" style="display:none"></a>
 		<div id="forget_pwd_modal" class="reveal-modal">
-	  		<h2>请联系管理员修改密码！</h2>
+	  		<img border=0 width="360" height="200" src="./gif/punishment.gif" id="gif"/>
+			<h3 id="h3" style="display:none">我错啦，别生气了！</h3>
+			<input id="button" type="submit" value="我们天蝎座大度着呢，哼！" style="display:none"/>
+		</div>
+		<a class="open_btn" id="thx_btn" data-reveal-id="thx_modal" style="display:none"></a>
+		<div id="thx_modal" class="reveal-modal" >
+			<h3>Hooray！！</h3>
+			<img border=0 width="360" height="200" src="./gif/thx.gif" id="gif"/>
 			<a class="close_btn close-reveal-modal">&times;</a>
 		</div>
-		<a class="open_btn" id="conn_fail_btn" data-reveal-id="conn_fail_modal" style="display:none"></a>
-		<div id="conn_fail_modal" class="reveal-modal">
-			<h2>向数据库请求数据失败，请检查数据库连接状况！</h2>
-			<a class="close_btn close-reveal-modal">&times;</a>
-		</div>	
 		<div class="jumbotron">
 			<div class="container">
-				<h1>Hey, my apology!</h1>
+				<h1>Qin, my apology!</h1>
 			</div>
 		</div>
 		<div class="container" style="text-align:center">
@@ -31,17 +33,19 @@
 							<h2>检查</h2>
 						</div>
 						<div class="col-md-offset-2 col-md-8">
-							<h3>本人在与学姐的聊天中抱残守缺，态度消极，缺乏主动，让学姐生气，对学姐造成了困扰。180度深躬道歉。学姐，我错啦，恳请原谅！</h3>
+							<h3>本人在与学姐的聊天中抱残守缺，态度消极，缺乏主动，让学姐生气，对学姐造成了困扰。180度深躬道歉！</h3>
 							<h3 id="special">特此检查，恳请原谅！&_&</h3>
 							
 						</div>
-						
+						<hr/>
+						<img border=0 width="720" height="400" src="./img/apology.png"/>
+						<hr/>
 						<div class="col-md-12">
-							<button type="button" class="btn btn-default">我不解气！！！</button>
+							<button type="button" class="btn btn-default" id="forgive">不解气, 戳这里</button>
 						</div>
+						<hr/><hr/><hr/>
 					</div>
 				</div>
-			<input class="pn-search-submit" type="image" src="/img/apology.png"/>
 				
 			</div>
 		</div>
@@ -49,23 +53,23 @@
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/jquery.cookie.js"></script>
 		<script type="text/javascript" src="js/jquery.reveal.js"></script>
-    	<script type="text/javascript" src="js/method.js"></script>
-    	<script type="text/javascript">
-	    	$(document).ready(function(){ 
-	    		$("#warning_box").hide();  
-	   			$("#login_btn").on("click", function(event){
-	   				console.log("in click");
-	   				event.preventDefault();
-					var username = $("#username").val();
-					var password = $("#inputPassword").val();
-					if(username == "" || password==""){
-						$("#warning_box").text("用户名或密码不能为空！").show();
-						return false;
-				}
+		<script type="text/javascript" src="js/method.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){ 
+				$("#forgive").on("click", function(event){
+					$("#forget_pwd_btn").trigger("click");
+					setTimeout(function () { 
+						$('#gif').css("display","none");
+						$('#h3').show();
+						$('#button').show();
+					}, 4000);
+					$('#button').on("click", function(event){
+						$("#thx_btn").trigger("click");
+					});
+				});
+	
+				
 			});
-
-	    		
-	    	});
-    	</script> 
+		</script> 
 	</body>
 </html>
